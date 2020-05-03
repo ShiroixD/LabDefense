@@ -1,4 +1,4 @@
-﻿Shader "Custom/Explosion"
+﻿Shader "Custom/SimpleExplosion"
 {
     Properties
     {

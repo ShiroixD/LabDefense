@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SimpleVolumericExplosionMaterial
-  m_Shader: {fileID: 4800000, guid: b6964556c372c644bbc47bdd7b7e81db, type: 3}
+  m_Name: SimpleVolumericExplosionPhongTesselationMaterial
+  m_Shader: {fileID: 4800000, guid: a065cece9c50ccd4e90c58bb29d138c1, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -70,6 +70,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _Displacement: 0.5
     - _DstBlend: 0
+    - _EdgeLength: 5
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -77,6 +78,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Phong: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
