@@ -16,7 +16,11 @@
             #pragma vertex VertexProgram
             #pragma fragment FragmentProgram
 
-            #include "VolumericExplosion.hlsl"
+            sampler2D _MainTex;
+
+            #include "VolumericExplosion.hlsli"
+            #include "VolumericExplosionVS.hlsl"
+            #include "VolumericExplosionFS.hlsl"
 
             ENDHLSL
         }
