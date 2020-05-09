@@ -9,6 +9,7 @@
         _Range("Range (min,max)", Vector) = (0,0.5,0)
         _ClipRange("ClipRange [0,1]", float) = 0.8
     }
+
     SubShader
     {
         Tags { "RenderType"="Opaque" }
@@ -58,5 +59,6 @@
         }
         ENDCG
     }
+    
     FallBack "Diffuse"
 }
