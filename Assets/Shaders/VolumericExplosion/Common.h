@@ -27,18 +27,18 @@
 SamplerState My_Trilinear_Clamp_Sampler : register(S_REG(S_BILINEAR_CLAMPED_SAMPLER));
 SamplerState My_Trilinear_Repeat_Sampler : register(S_REG(S_BILINEAR_WRAPPED_SAMPLER));
 
+#define CONSTANT_BUFFER( name, reg ) cbuffer name : register( b##reg )
+
 // =======================================================================
 // Shared ( C++ & HLSL )
 // =======================================================================
-CBUFFER_START(UnityPerFrame)
-    float4x4 unity_MatrixVP;
-CBUFFER_END
-
-CBUFFER_START(UnityPerDraw)
+CONSTANT_BUFFER(ExplosionParams, B_EXPLOSION_PARAMS)
+{
     float4x4 unity_ObjectToWorld;
-CBUFFER_END
+    float4x4 unity_WorldToObject;
+    float4 _ProjectionParams;
+    float4 _ScreenParams;
 
-CBUFFER_START(ExplosionParams)
     float4x4 g_WorldToViewMatrix;
     float4x4 g_ViewToProjectionMatrix;
     float4x4 g_ProjectionToViewMatrix;
@@ -52,15 +52,11 @@ CBUFFER_START(ExplosionParams)
     float3 g_EyeForwardWS;
     float g_NoiseScale;
 
-    float4 g_ProjectionParams;
-
-    float4 g_ScreenParams;
-
     float3 g_ExplosionPositionWS;
     float g_ExplosionRadiusWS;
 
     float3 g_NoiseAnimationSpeed;
-    float g_Time;
+    float4 _SinTime;
 
     float g_EdgeSoftness;
     float g_NoiseFrequencyFactor;
@@ -80,6 +76,6 @@ CBUFFER_START(ExplosionParams)
     uint g_NumHullOctaves;
     uint g_NumHullSteps;
     float g_TessellationFactor;
-CBUFFER_END
+};
 
 #endif // COMMON_H

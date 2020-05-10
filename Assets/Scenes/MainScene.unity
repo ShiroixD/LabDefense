@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 425620734}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -599,7 +599,6 @@ GameObject:
   - component: {fileID: 753777503}
   - component: {fileID: 753777502}
   - component: {fileID: 753777501}
-  - component: {fileID: 753777500}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Untagged
@@ -607,25 +606,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &753777500
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 753777499}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 89d7aad036334094aa0223710cbe92f0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!135 &753777501
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -648,10 +628,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 753777499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 477a9587adeefe549aca0dac06fa0cb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9cce7601e6fe3a4488a479f38be97502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loopduration: 1
+  kNoiseAnimationSpeed: {x: 0, y: 0.02, z: 0}
+  kNoiseInitialAmplitude: 3
+  kMaxNumSteps: 256
+  kNumHullSteps: 2
+  kStepSize: 0.04
+  kNumOctaves: 4
+  kNumHullOctaves: 2
+  kSkinThicknessBias: 0.6
+  kTessellationFactor: 16
+  g_MaxSkinThickness: 0
+  g_MaxNoiseDisplacement: 0
+  g_EnableHullShrinking: 1
+  g_EdgeSoftness: 0.05
+  g_NoiseScale: 0.04
+  g_ExplosionRadius: 4
+  g_DisplacementAmount: 1.75
+  g_UvScaleBias: {x: 2.1, y: 0.35}
+  g_NoiseAmplitudeFactor: 0.4
+  g_NoiseFrequencyFactor: 3
 --- !u!23 &753777503
 MeshRenderer:
   m_ObjectHideFlags: 0

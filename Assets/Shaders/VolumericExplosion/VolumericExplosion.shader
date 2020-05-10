@@ -2,7 +2,7 @@
 {
     Properties
     {
-        _MainTex ("Texture", 2D) = "white" {}
+        
     }
     SubShader
     {
@@ -17,8 +17,6 @@
             #pragma hull HullProgram
             #pragma domain DomainProgram
             #pragma fragment PixelProgram
-
-            sampler2D _MainTex;
 
             #include "VolumericExplosion.hlsli"
             #include "VolumericExplosionVS.hlsl"
