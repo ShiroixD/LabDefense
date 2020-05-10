@@ -12,15 +12,19 @@
         Pass
         {
             HLSLPROGRAM
-            #pragma target 3.5
+            #pragma target 4.6
             #pragma vertex VertexProgram
-            #pragma fragment FragmentProgram
+            #pragma hull HullProgram
+            #pragma domain DomainProgram
+            #pragma fragment PixelProgram
 
             sampler2D _MainTex;
 
             #include "VolumericExplosion.hlsli"
             #include "VolumericExplosionVS.hlsl"
-            #include "VolumericExplosionFS.hlsl"
+            #include "VolumericExplosionHS.hlsl"
+            #include "VolumericExplosionDS.hlsl"
+            #include "VolumericExplosionPS.hlsl"
 
             ENDHLSL
         }
