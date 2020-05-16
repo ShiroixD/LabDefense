@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class VolumericExplosion : MonoBehaviour
 {
     private Camera _camera;
     private Renderer _renderer;
+    private Texture3D _noiseTexture;
+    public int NoiseTextureDim = 32;
     public Vector3 kNoiseAnimationSpeed = new Vector3(0.0f, 0.02f, 0.0f);
     public float kNoiseInitialAmplitude = 3.0f;
     public uint kMaxNumSteps = 256;
@@ -30,11 +33,38 @@ public class VolumericExplosion : MonoBehaviour
     {
         _camera = Camera.main;
         _renderer = GetComponent<Renderer>();
+        _noiseTexture = LoadTexture3dFromFile("Assets/Resources/noise_32x32x32.dat");
     }
 
     void Update()
     {
-        UpdateExplosionParams();
+        //UpdateExplosionParams();
+    }
+
+    Texture3D LoadTexture3dFromFile(string path)
+    {
+        int noiseTextureDim = NoiseTextureDim * NoiseTextureDim * NoiseTextureDim;
+        ushort maxNoiseValue = 0, minNoiseValue = 0xFFFF;
+        ushort[] noiseValues = new ushort[noiseTextureDim];
+        int i = 0;
+        using (StreamReader reader = new StreamReader(path))
+        {
+            while (!reader.EndOfStream)
+            {
+                string line = reader.ReadLine();
+                ushort noiseValue;
+                ushort.TryParse(line, out noiseValue);
+                maxNoiseValue = (ushort)Mathf.Max(maxNoiseValue, noiseValue);
+                minNoiseValue = (ushort)Mathf.Min(minNoiseValue, noiseValue);
+                noiseValues[i] = noiseValue;
+                i++;
+            }
+        }
+
+        Texture3D resultTexture = new Texture3D(NoiseTextureDim, NoiseTextureDim, NoiseTextureDim, TextureFormat.R16, true);
+
+
+        return resultTexture;
     }
 
     void UpdateExplosionParams()
@@ -48,7 +78,6 @@ public class VolumericExplosion : MonoBehaviour
         Vector3 cameraPos = _camera.transform.position;
         Vector3 cameraForward = _camera.transform.forward;
         Vector3 explosionPosition = transform.position;
-
         _renderer.material.SetMatrix("g_WorldToViewMatrix", view);
         _renderer.material.SetMatrix("g_ViewToProjectionMatrix", projection);
         _renderer.material.SetMatrix("g_ProjectionToViewMatrix", invProjection);

@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &136425233
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -631,6 +631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cce7601e6fe3a4488a479f38be97502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoiseTextureDim: 32
   kNoiseAnimationSpeed: {x: 0, y: 0.02, z: 0}
   kNoiseInitialAmplitude: 3
   kMaxNumSteps: 256
@@ -765,7 +766,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1013558170
 MonoBehaviour:
   m_ObjectHideFlags: 0
