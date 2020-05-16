@@ -34,11 +34,6 @@ SamplerState My_Trilinear_Repeat_Sampler : register(S_REG(S_BILINEAR_WRAPPED_SAM
 // =======================================================================
 CONSTANT_BUFFER(ExplosionParams, B_EXPLOSION_PARAMS)
 {
-    float4x4 unity_ObjectToWorld;
-    float4x4 unity_WorldToObject;
-    float4 _ProjectionParams;
-    float4 _ScreenParams;
-
     float4x4 g_WorldToViewMatrix;
     float4x4 g_ViewToProjectionMatrix;
     float4x4 g_ProjectionToViewMatrix;
@@ -52,11 +47,15 @@ CONSTANT_BUFFER(ExplosionParams, B_EXPLOSION_PARAMS)
     float3 g_EyeForwardWS;
     float g_NoiseScale;
 
+    float4 g_ProjectionParams;
+
+    float4 g_ScreenParams;
+
     float3 g_ExplosionPositionWS;
     float g_ExplosionRadiusWS;
 
     float3 g_NoiseAnimationSpeed;
-    float4 _SinTime;
+    float g_Time;
 
     float g_EdgeSoftness;
     float g_NoiseFrequencyFactor;

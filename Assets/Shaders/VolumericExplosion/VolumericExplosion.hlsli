@@ -30,7 +30,7 @@ float Noise(float3 uvw)
 
 float FractalNoiseAtPositionWS(float3 posWS, uint numOctaves)
 {
-    const float3 animation = g_NoiseAnimationSpeed * _SinTime.y;
+    const float3 animation = g_NoiseAnimationSpeed * g_Time;
 
     float3 uvw = posWS * g_NoiseScale + animation;
     float amplitude = g_NoiseInitialAmplitude;
