@@ -49,7 +49,7 @@ public class VolumericExplosion : MonoBehaviour
     void Update()
     {
         UpdateExplosionParams();
-        ShaderFieldsTest();
+        //ShaderFieldsTest();
     }
 
     void LoadResources()
