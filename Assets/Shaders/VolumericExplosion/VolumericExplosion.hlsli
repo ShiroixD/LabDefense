@@ -3,8 +3,8 @@
 
 #include "Common.h"
 
-Texture3D<float>    g_NoiseVolumeRO : register(T_REG(T_NOISE_VOLUME));
-Texture2D<float4>   g_GradientTexRO : register(T_REG(T_GRADIENT_TEX));
+Texture3D    _NoiseVolumeRO : register(T_REG(T_NOISE_VOLUME));
+Texture2D   _GradientTexRO : register(T_REG(T_GRADIENT_TEX));
 
 struct HS_CONSTANT_DATA_OUTPUT
 {
@@ -23,7 +23,7 @@ struct PS_INPUT
 
 float Noise(float3 uvw)
 {
-    const float noiseVal = g_NoiseVolumeRO.SampleLevel(My_Trilinear_Repeat_Sampler, uvw, 0);
+    const float noiseVal = _NoiseVolumeRO.SampleLevel(sampler_NoiseVolumeRO, uvw, 0);
 
     return noiseVal;
 }
@@ -115,7 +115,7 @@ float4 MapDisplacementToColour(const float displacement, const float2 uvScaleBia
     float texcoord = saturate(mad(displacement, uvScaleBias.x, uvScaleBias.y));
     texcoord = 1 - (1 - texcoord) * (1 - texcoord); // These adjustments should be made in the texture itself.
 
-    float4 colour = g_GradientTexRO.SampleLevel(My_Trilinear_Clamp_Sampler, texcoord, 0);
+    float4 colour = _GradientTexRO.SampleLevel(sampler_GradientTexRO, texcoord, 0);
 
     // Apply some more adjustments to the colour post sample.  Again, these should be made in the texture itself.
     colour *= colour;

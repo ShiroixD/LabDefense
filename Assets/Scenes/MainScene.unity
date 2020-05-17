@@ -1001,7 +1001,6 @@ MonoBehaviour:
   kNumHullOctaves: 2
   kSkinThicknessBias: 0.6
   kTessellationFactor: 16
-  g_MaxSkinThickness: 0
   g_EnableHullShrinking: 1
   g_EdgeSoftness: 0.05
   g_NoiseScale: 0.04

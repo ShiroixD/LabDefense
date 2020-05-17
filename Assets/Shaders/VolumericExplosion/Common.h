@@ -3,9 +3,6 @@
 
 #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
 
-// =======================================================================
-// Global register indices
-// =======================================================================
 #define S_BILINEAR_CLAMPED_SAMPLER      0
 #define S_BILINEAR_WRAPPED_SAMPLER      1
 
@@ -15,19 +12,34 @@
 
 #define PI      (3.14159265359f)
 
-// =======================================================================
-// HLSL ONLY
-// =======================================================================
-
 #define S_REG(oo)		s##oo
 #define T_REG(oo)		t##oo
 #define U_REG(oo)		u##oo
 #define B_REG(oo)		b##oo
 
-SamplerState My_Trilinear_Clamp_Sampler : register(S_REG(S_BILINEAR_CLAMPED_SAMPLER));
-SamplerState My_Trilinear_Repeat_Sampler : register(S_REG(S_BILINEAR_WRAPPED_SAMPLER));
+SamplerState sampler_GradientTexRO
+{
+    Filter = MIN_MAG_LINEAR_MIP_POINT;
+    AddressU = Clamp;
+    AddressV = Clamp;
+    ComparisonFunc = Never;
+    MinLod = 0;
+    MaxLOD = FLOAT32_MAX;
+};
+
+SamplerState sampler_NoiseVolumeRO
+{
+    Filter = MIN_MAG_LINEAR_MIP_POINT;
+    AddressU = Wrap;
+    AddressV = Wrap;
+    AddressW = Wrap;
+    ComparisonFunc = Never;
+    MinLod = 0;
+    MaxLOD = FLOAT32_MAX;
+};
 
 #define CONSTANT_BUFFER( name, reg ) cbuffer name : register( b##reg )
+
 
 // =======================================================================
 // Shared ( C++ & HLSL )

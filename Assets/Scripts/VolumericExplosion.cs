@@ -61,8 +61,8 @@ public class VolumericExplosion : MonoBehaviour
     void SetTextures(string path)
     {
         _noiseTexture = LoadTexture3dFromTextFile(path);
-        _renderer.material.SetTexture("g_NoiseVolumeRO", _noiseTexture);
-        _renderer.material.SetTexture("g_GradientTexRO", GradientTexRO);
+        _renderer.material.SetTexture("_NoiseVolumeRO", _noiseTexture);
+        _renderer.material.SetTexture("_GradientTexRO", GradientTexRO);
     }
 
     Texture3D LoadTexture3dFromTextFile(string path)
@@ -188,9 +188,9 @@ public class VolumericExplosion : MonoBehaviour
 
     void TexturesTest()
     {
-        Texture3D g_NoiseVolumeRO_test = (Texture3D)_renderer.material.GetTexture("g_NoiseVolumeRO");
+        Texture3D g_NoiseVolumeRO_test = (Texture3D)_renderer.material.GetTexture("_NoiseVolumeRO");
         var g_NoiseVolumeRO_pixels_test = g_NoiseVolumeRO_test.GetPixels();
-        Texture2D g_GradientTexRO_test = (Texture2D)_renderer.material.GetTexture("g_GradientTexRO");
+        Texture2D g_GradientTexRO_test = (Texture2D)_renderer.material.GetTexture("_GradientTexRO");
         var g_GradientTexRO_pixels_test = g_GradientTexRO_test.GetPixels();
     }
 

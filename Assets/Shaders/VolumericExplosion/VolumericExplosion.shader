@@ -2,7 +2,8 @@
 {
     Properties
     {
-        
+        _NoiseVolumeRO("Noise texture", 3D) = "" {}
+        _GradientTexRO("Gradient texture", 2D) = "white" {}
     }
     SubShader
     {
