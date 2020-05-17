@@ -3,9 +3,6 @@
 
 #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
 
-// =======================================================================
-// Global register indices
-// =======================================================================
 #define S_BILINEAR_CLAMPED_SAMPLER      0
 #define S_BILINEAR_WRAPPED_SAMPLER      1
 
@@ -15,30 +12,40 @@
 
 #define PI      (3.14159265359f)
 
-// =======================================================================
-// HLSL ONLY
-// =======================================================================
-
 #define S_REG(oo)		s##oo
 #define T_REG(oo)		t##oo
 #define U_REG(oo)		u##oo
 #define B_REG(oo)		b##oo
 
-SamplerState My_Trilinear_Clamp_Sampler : register(S_REG(S_BILINEAR_CLAMPED_SAMPLER));
-SamplerState My_Trilinear_Repeat_Sampler : register(S_REG(S_BILINEAR_WRAPPED_SAMPLER));
+SamplerState sampler_GradientTexRO
+{
+    Filter = MIN_MAG_LINEAR_MIP_POINT;
+    AddressU = Clamp;
+    AddressV = Clamp;
+    ComparisonFunc = Never;
+    MinLod = 0;
+    MaxLOD = FLOAT32_MAX;
+};
+
+SamplerState sampler_NoiseVolumeRO
+{
+    Filter = MIN_MAG_LINEAR_MIP_POINT;
+    AddressU = Wrap;
+    AddressV = Wrap;
+    AddressW = Wrap;
+    ComparisonFunc = Never;
+    MinLod = 0;
+    MaxLOD = FLOAT32_MAX;
+};
 
 #define CONSTANT_BUFFER( name, reg ) cbuffer name : register( b##reg )
+
 
 // =======================================================================
 // Shared ( C++ & HLSL )
 // =======================================================================
 CONSTANT_BUFFER(ExplosionParams, B_EXPLOSION_PARAMS)
 {
-    float4x4 unity_ObjectToWorld;
-    float4x4 unity_WorldToObject;
-    float4 _ProjectionParams;
-    float4 _ScreenParams;
-
     float4x4 g_WorldToViewMatrix;
     float4x4 g_ViewToProjectionMatrix;
     float4x4 g_ProjectionToViewMatrix;
@@ -52,11 +59,15 @@ CONSTANT_BUFFER(ExplosionParams, B_EXPLOSION_PARAMS)
     float3 g_EyeForwardWS;
     float g_NoiseScale;
 
+    float4 g_ProjectionParams;
+
+    float4 g_ScreenParams;
+
     float3 g_ExplosionPositionWS;
     float g_ExplosionRadiusWS;
 
     float3 g_NoiseAnimationSpeed;
-    float4 _SinTime;
+    float g_Time;
 
     float g_EdgeSoftness;
     float g_NoiseFrequencyFactor;
