@@ -17,7 +17,7 @@
 #define U_REG(oo)		u##oo
 #define B_REG(oo)		b##oo
 
-SamplerState sampler_GradientTexRO
+SamplerState sampler_GradientTexRO : register(S_REG(S_BILINEAR_CLAMPED_SAMPLER))
 {
     Filter = MIN_MAG_LINEAR_MIP_POINT;
     AddressU = Clamp;
@@ -27,7 +27,7 @@ SamplerState sampler_GradientTexRO
     MaxLOD = FLOAT32_MAX;
 };
 
-SamplerState sampler_NoiseVolumeRO
+SamplerState sampler_NoiseVolumeRO : register(S_REG(S_BILINEAR_WRAPPED_SAMPLER))
 {
     Filter = MIN_MAG_LINEAR_MIP_POINT;
     AddressU = Wrap;
