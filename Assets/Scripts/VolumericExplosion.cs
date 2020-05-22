@@ -86,7 +86,7 @@ public class VolumericExplosion : MonoBehaviour
             }
         }
 
-        Texture3D resultTexture = new Texture3D(NoiseTextureDim, NoiseTextureDim, NoiseTextureDim, TextureFormat.R16, true);
+        Texture3D resultTexture = new Texture3D(NoiseTextureDim, NoiseTextureDim, NoiseTextureDim, TextureFormat.R16, 1);
         resultTexture.filterMode = FilterMode.Bilinear;
         resultTexture.wrapMode = TextureWrapMode.Repeat;
         resultTexture.SetPixelData(noiseValues, 0);
@@ -95,7 +95,11 @@ public class VolumericExplosion : MonoBehaviour
         // Calculate the maximum possible displacement from noise based on our 
         //  fractal noise parameters.  This is used to ensure our explosion primitive 
         //  fits in our base sphere.
-        float largestAbsoluteNoiseValue = Mathf.Max(Mathf.Abs(maxNoiseValue), Mathf.Abs(minNoiseValue));
+        /*
+            float largestAbsoluteNoiseValue = max(abs(XMConvertHalfToFloat(maxNoiseValue)), abs(XMConvertHalfToFloat(minNoiseValue)));
+            Ustawiłem na sztywno bo nie wiem jak obliczyć to co daje XMConvertHalfToFloat
+         */
+        float largestAbsoluteNoiseValue = 0.449462891f;
         g_MaxNoiseDisplacement = 0;
         for (uint i = 0; i < kNumOctaves; i++)
         {

@@ -17,26 +17,8 @@
 #define U_REG(oo)		u##oo
 #define B_REG(oo)		b##oo
 
-SamplerState sampler_GradientTexRO : register(S_REG(S_BILINEAR_CLAMPED_SAMPLER))
-{
-    Filter = MIN_MAG_LINEAR_MIP_POINT;
-    AddressU = Clamp;
-    AddressV = Clamp;
-    ComparisonFunc = Never;
-    MinLod = 0;
-    MaxLOD = FLOAT32_MAX;
-};
-
-SamplerState sampler_NoiseVolumeRO : register(S_REG(S_BILINEAR_WRAPPED_SAMPLER))
-{
-    Filter = MIN_MAG_LINEAR_MIP_POINT;
-    AddressU = Wrap;
-    AddressV = Wrap;
-    AddressW = Wrap;
-    ComparisonFunc = Never;
-    MinLod = 0;
-    MaxLOD = FLOAT32_MAX;
-};
+SamplerState sampler_GradientTexRO : register(S_REG(S_BILINEAR_CLAMPED_SAMPLER));
+SamplerState sampler_NoiseVolumeRO : register(S_REG(S_BILINEAR_WRAPPED_SAMPLER));
 
 #define CONSTANT_BUFFER( name, reg ) cbuffer name : register( b##reg )
 

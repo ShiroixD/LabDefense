@@ -3,7 +3,7 @@
 
 #include "Common.h"
 
-Texture3D    _NoiseVolumeRO : register(T_REG(T_NOISE_VOLUME));
+Texture3D   _NoiseVolumeRO : register(T_REG(T_NOISE_VOLUME));
 Texture2D   _GradientTexRO : register(T_REG(T_GRADIENT_TEX));
 
 struct HS_CONSTANT_DATA_OUTPUT
