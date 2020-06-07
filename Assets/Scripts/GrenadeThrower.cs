@@ -6,12 +6,19 @@ public class GrenadeThrower : MonoBehaviour
 {
     public float throwForce = 40f;
     public GameObject grenadePrefab;
+    public GameObject boxesPrefab;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             ThrowGrenade();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            Vector3 boxPos = transform.position + transform.forward * 10; ;
+            Instantiate(boxesPrefab, boxPos, transform.rotation);
         }
     }
 
