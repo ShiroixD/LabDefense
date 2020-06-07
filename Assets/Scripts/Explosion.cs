@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    public int loopduration;
+    public float totalDuration = 3.0f;
+    public float loopduration;
+    public float rangeX = 0.15f;
+    public float rangeY = 0.6f;
+
     void Start()
     {
-        
+        Destroy(gameObject, 3f);
     }
 
     void Update()
@@ -20,5 +24,6 @@ public class Explosion : MonoBehaviour
         g *= correction;
         b *= correction;
         GetComponent<Renderer>().material.SetVector("_ChannelFactor", new Vector4(r, g, b, 0));
+        GetComponent<Renderer>().material.SetVector("_Range", new Vector4(rangeX, rangeY, 0, 1));
     }
 }
