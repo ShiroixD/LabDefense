@@ -8,21 +8,24 @@ public class Explosion : MonoBehaviour
     public float loopduration;
     public float rangeX = 0.15f;
     public float rangeY = 0.6f;
+    public bool ifInstanced = false;
     List<Matrix4x4> matrices;
     void Start()
     {
         Destroy(gameObject, 3f);
         matrices = new List<Matrix4x4>();
 
-        for(int i=0; i < 100; i++)
+        if (ifInstanced)
         {
-            float x = this.transform.position.x + Random.Range(-3.5f, 3.5f);
-            float y = this.transform.position.y  +  Random.Range(-2.0f, 2.5f);
-            float z = this.transform.position.z + Random.Range(-3.0f, 3.0f);
+            for (int i = 0; i < 100; i++)
+            {
+                float x = this.transform.position.x + Random.Range(-3.5f, 3.5f);
+                float y = this.transform.position.y + Random.Range(-2.0f, 2.5f);
+                float z = this.transform.position.z + Random.Range(-3.0f, 3.0f);
 
-            matrices.Add(Matrix4x4.TRS(new Vector3(x, y, z), Quaternion.identity, this.transform.localScale));
+                matrices.Add(Matrix4x4.TRS(new Vector3(x, y, z), Quaternion.identity, this.transform.localScale));
+            }
         }
-       
     }
 
     void Update()
@@ -37,7 +40,9 @@ public class Explosion : MonoBehaviour
         GetComponent<Renderer>().material.SetVector("_ChannelFactor", new Vector4(r, g, b, 0));
         GetComponent<Renderer>().material.SetVector("_Range", new Vector4(rangeX, rangeY, 0, 1));
 
-
-        Graphics.DrawMeshInstanced(this.GetComponent<MeshFilter>().sharedMesh, 0, GetComponent<MeshRenderer>().material, matrices);
+        if (ifInstanced)
+        {
+            Graphics.DrawMeshInstanced(this.GetComponent<MeshFilter>().sharedMesh, 0, GetComponent<MeshRenderer>().material, matrices);
+        }
     }
 }
