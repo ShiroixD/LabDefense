@@ -9,6 +9,7 @@
         _ChannelFactor("ChannelFactor (r,g,b)", Vector) = (1,0,0)
         _Range("Range (min,max)", Vector) = (0,0.5,0)
         _ClipRange("ClipRange [0,1]", float) = 0.8
+        _Pos("Position", Vector) = (0,0,0)
     }
     SubShader
     {
@@ -27,6 +28,13 @@
         float2 _Range;
         float _ClipRange;
 
+        // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
+        // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
+        // #pragma instancing_options assumeuniformscaling
+        UNITY_INSTANCING_BUFFER_START(Props)
+            // put more per-instance properties here
+            UNITY_DEFINE_INSTANCED_PROP(fixed4, _Pos)
+            UNITY_INSTANCING_BUFFER_END(Props)
         struct Input
         {
             float2 uv_DispTex;
@@ -42,14 +50,10 @@
             float3 dcolor = tex2Dlod(_DispTex, float4(v.texcoord.xy, 0, 0));
             float d = (dcolor.r * _ChannelFactor.r + dcolor.g * _ChannelFactor.g + dcolor.b * _ChannelFactor.b);
             v.vertex.xyz += v.normal * d * _Displacement;
+            //v.vertex +=  UNITY_ACCESS_INSTANCED_PROP(Props, _Pos);
         }
 
-        // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
-        // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
-        // #pragma instancing_options assumeuniformscaling
-        UNITY_INSTANCING_BUFFER_START(Props)
-            // put more per-instance properties here
-        UNITY_INSTANCING_BUFFER_END(Props)
+        
 
         sampler2D _RampTex;
 
