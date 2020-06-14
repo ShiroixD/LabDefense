@@ -107,7 +107,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 477a9587adeefe549aca0dac06fa0cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalDuration: 3
   loopduration: 1
+  rangeX: 0.15
+  rangeY: 0.6
+  ifInstanced: 1
+  ExplosionValue: 5
 --- !u!95 &4016071964642417581
 Animator:
   serializedVersion: 3

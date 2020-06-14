@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Policy;
 using UnityEngine;
 
 public class Explosion : MonoBehaviour
@@ -9,6 +10,7 @@ public class Explosion : MonoBehaviour
     public float rangeX = 0.15f;
     public float rangeY = 0.6f;
     public bool ifInstanced = false;
+    public int ExplosionValue = 10;
     List<Matrix4x4> matrices;
     void Start()
     {
@@ -17,7 +19,7 @@ public class Explosion : MonoBehaviour
 
         if (ifInstanced)
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < ExplosionValue; i++)
             {
                 float x = this.transform.position.x + Random.Range(-3.5f, 3.5f);
                 float y = this.transform.position.y + Random.Range(-2.0f, 2.5f);

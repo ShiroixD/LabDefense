@@ -98,6 +98,8 @@ MonoBehaviour:
   loopduration: 1
   rangeX: 0.15
   rangeY: 0.6
+  ifInstanced: 1
+  ExplosionValue: 5
 --- !u!135 &2678805063736211876
 SphereCollider:
   m_ObjectHideFlags: 0
