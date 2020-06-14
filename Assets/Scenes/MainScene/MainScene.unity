@@ -233,6 +233,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 3078273}
   lookRadius: 10
@@ -2746,6 +2748,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 105469529}
   lookRadius: 10
@@ -3250,6 +3254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 120613351}
   lookRadius: 10
@@ -4221,6 +4227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 161571726}
   lookRadius: 10
@@ -4827,6 +4835,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 188990154}
   lookRadius: 10
@@ -12238,6 +12248,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 303028790}
   lookRadius: 10
@@ -13535,6 +13547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 342465312}
   lookRadius: 10
@@ -19887,6 +19901,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 413221382}
   lookRadius: 10
@@ -20029,6 +20045,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 419509418}
   lookRadius: 10
@@ -21276,6 +21294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 449354586}
   lookRadius: 10
@@ -21733,6 +21753,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 472109956}
   lookRadius: 10
@@ -22184,6 +22206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 481216680}
   lookRadius: 10
@@ -23365,6 +23389,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 524634575}
   lookRadius: 10
@@ -23885,6 +23911,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 540331860}
   lookRadius: 10
@@ -25264,6 +25292,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 575816544}
   lookRadius: 10
@@ -28489,6 +28519,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 694145352}
   lookRadius: 10
@@ -29288,7 +29320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee56578d4c29be43886fa650bda94d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 80
   minimumHealth: 0
   maximumHealth: 100
   lowHealth: 33
@@ -29523,6 +29555,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 714635729}
   lookRadius: 10
@@ -30122,6 +30156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 730324930}
   lookRadius: 10
@@ -30264,6 +30300,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 732586058}
   lookRadius: 10
@@ -30992,6 +31030,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 746577048}
   lookRadius: 10
@@ -31329,6 +31369,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 752934039}
   lookRadius: 10
@@ -34336,6 +34378,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 861049159}
   lookRadius: 10
@@ -34799,6 +34843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 880271978}
   lookRadius: 10
@@ -35244,6 +35290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 885043809}
   lookRadius: 10
@@ -35386,6 +35434,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 885105120}
   lookRadius: 10
@@ -37810,6 +37860,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 957028253}
   lookRadius: 10
@@ -38078,6 +38130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 959467205}
   lookRadius: 10
@@ -38817,6 +38871,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 982276828}
   lookRadius: 10
@@ -39197,6 +39253,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 987348527}
   lookRadius: 10
@@ -40165,6 +40223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1009384276}
   lookRadius: 10
@@ -40307,6 +40367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1011666681}
   lookRadius: 10
@@ -42840,7 +42902,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18ff5c84dcad69a4aa7c26b4fd3897b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 0}
   lookRadius: 6
@@ -43266,6 +43330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1113211260}
   lookRadius: 10
@@ -44038,6 +44104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1132357831}
   lookRadius: 10
@@ -45334,6 +45402,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1183629390}
   lookRadius: 10
@@ -46802,6 +46872,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1229661420}
   lookRadius: 10
@@ -52881,6 +52953,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1286465179}
   lookRadius: 10
@@ -53637,6 +53711,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1302531737}
   lookRadius: 10
@@ -54601,6 +54677,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1327548337}
   lookRadius: 10
@@ -54743,6 +54821,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1329296984}
   lookRadius: 10
@@ -54885,6 +54965,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1332364631}
   lookRadius: 10
@@ -55389,6 +55471,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1349457141}
   lookRadius: 10
@@ -55594,6 +55678,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1362672137}
   lookRadius: 10
@@ -56065,6 +56151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1389127497}
   lookRadius: 10
@@ -57714,6 +57802,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1513501087}
   lookRadius: 10
@@ -57919,6 +58009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1515720351}
   lookRadius: 10
@@ -59249,6 +59341,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1564482846}
   lookRadius: 10
@@ -59574,6 +59668,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1577331360}
   lookRadius: 10
@@ -59962,6 +60058,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1584035320}
   lookRadius: 10
@@ -65955,6 +66053,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1614702244}
   lookRadius: 10
@@ -68845,6 +68945,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1740479366}
   lookRadius: 10
@@ -70313,6 +70415,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1803368785}
   lookRadius: 10
@@ -70695,6 +70799,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1811933721}
   lookRadius: 10
@@ -75883,6 +75989,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1829628274}
   lookRadius: 10
@@ -77115,6 +77223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1854301651}
   lookRadius: 10
@@ -77377,6 +77487,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1857745080}
   lookRadius: 10
@@ -77785,6 +77897,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1866816940}
   lookRadius: 10
@@ -78053,6 +78167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1870571468}
   lookRadius: 10
@@ -79349,6 +79465,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1922685145}
   lookRadius: 10
@@ -80135,6 +80253,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1940233762}
   lookRadius: 10
@@ -80450,6 +80570,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1943080007}
   lookRadius: 10
@@ -81295,6 +81417,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1970291311}
   lookRadius: 10
@@ -81805,6 +81929,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 1983054937}
   lookRadius: 10
@@ -90263,6 +90389,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 2101967521}
   lookRadius: 10
@@ -90531,6 +90659,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  damage: 10
+  attackDelay: 0.5
   dieDelay: 3
   destructible: {fileID: 2110597442}
   lookRadius: 10
