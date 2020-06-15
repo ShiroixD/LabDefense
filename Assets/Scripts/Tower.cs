@@ -7,9 +7,6 @@ public class Tower : MonoBehaviour
     [SerializeField]
     private Healthbar _healthBar;
 
-    [SerializeField]
-    private int _healthCapacity;
-
     void Start()
     {
         

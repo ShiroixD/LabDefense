@@ -15,13 +15,17 @@ public class Target : MonoBehaviour
     public Destructible destructible;
     public float lookRadius = 10f;
 
-    private Transform target;
+    private Transform playerTransform;
+    private Transform towerTransform;
+    private Transform currentTargetTransform;
     private NavMeshAgent agent;
     private bool isAttacking;
 
     void Start()
     {
-        target = PlayerManager.instance.player.transform;
+        playerTransform = PlayerManager.instance.player.transform;
+        towerTransform = GameObject.FindWithTag("Tower").transform;
+        currentTargetTransform = towerTransform;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -29,20 +33,34 @@ public class Target : MonoBehaviour
     {
         if (agent != null)
         {
-            float distance = Vector3.Distance(target.position, transform.position);
+            float distanceToPlayer = Vector3.Distance(playerTransform.position, transform.position);
 
-            if (distance <= lookRadius)
-            {
-                agent.SetDestination(target.position);
-            }
+            if (distanceToPlayer <= lookRadius)
+                currentTargetTransform = playerTransform;
+            else
+                currentTargetTransform = towerTransform;
 
-            if (distance <= agent.stoppingDistance)
+            float distanceToTarget = Vector3.Distance(currentTargetTransform.position, transform.position);
+            agent.SetDestination(currentTargetTransform.position);
+            FaceTarget();
+
+            if (distanceToTarget <= agent.stoppingDistance)
             {
-                FaceTarget();
-                if (!isAttacking)
+                if (currentTargetTransform.CompareTag("Player"))
                 {
-                    isAttacking = true;
-                    StartCoroutine(Attack(attackDelay));
+                    if (!isAttacking)
+                    {
+                        isAttacking = true;
+                        StartCoroutine(AttackPlayer(attackDelay));
+                    }
+                }
+                else if (currentTargetTransform.CompareTag("Tower"))
+                {
+                    if (!isAttacking)
+                    {
+                        isAttacking = true;
+                        StartCoroutine(AttackTower(attackDelay));
+                    }
                 }
             }
             else
@@ -54,7 +72,7 @@ public class Target : MonoBehaviour
 
     void FaceTarget()
     {
-        Vector3 direction = (target.position - transform.position).normalized;
+        Vector3 direction = (currentTargetTransform.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
@@ -83,13 +101,23 @@ public class Target : MonoBehaviour
     }
 
 
-    IEnumerator Attack(float time)
+    IEnumerator AttackPlayer(float time)
     {
-        Player player = target.GetComponent<Player>();
+        Player player = playerTransform.GetComponent<Player>();
         while (isAttacking)
         {
             yield return new WaitForSeconds(time);
             player.TakeDamage((int)damage);
+        }
+    }
+
+    IEnumerator AttackTower(float time)
+    {
+        Tower tower = towerTransform.GetComponent<Tower>();
+        while (isAttacking)
+        {
+            yield return new WaitForSeconds(time);
+            tower.TakeDamage((int)damage);
         }
     }
 }
