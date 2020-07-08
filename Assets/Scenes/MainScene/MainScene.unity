@@ -238,6 +238,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 3078273}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &3078273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,6 +1276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 41778741}
   - component: {fileID: 41778740}
+  - component: {fileID: 41778742}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1307,6 +1311,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &41778742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41778739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083d1e449d859bd45a9aeb064d3c18bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transition: {fileID: 501205187}
+  _objectsToEnable:
+  - {fileID: 621748560}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &42219021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2783,6 +2811,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 105469529}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &105469529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3289,6 +3320,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 120613351}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &120613351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4292,6 +4326,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 161571726}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!54 &161571722
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4900,6 +4937,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 188990154}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &188990154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5576,6 +5616,100 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 217508821}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &236821384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 236821385}
+  - component: {fileID: 236821388}
+  - component: {fileID: 236821387}
+  - component: {fileID: 236821386}
+  m_Layer: 5
+  m_Name: EndTransition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &236821385
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236821384}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2051691878}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.024775}
+  m_SizeDelta: {x: 1920, y: 803.8003}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &236821386
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236821384}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 19ce393c17f00864cb661cdc5796801f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &236821387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236821384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &236821388
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236821384}
+  m_CullTransparentMesh: 0
 --- !u!1001 &245741866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12313,6 +12447,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 303028790}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &303028790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13693,6 +13830,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 342465312}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &342465312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19311,6 +19451,100 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &387601595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 387601596}
+  - component: {fileID: 387601598}
+  - component: {fileID: 387601597}
+  - component: {fileID: 387601599}
+  m_Layer: 5
+  m_Name: Win
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &387601596
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387601595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2051691878}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.024543762}
+  m_SizeDelta: {x: 1920, y: 803.80066}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &387601597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387601595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 521ec302da8d0e146831defaae131aff, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &387601598
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387601595}
+  m_CullTransparentMesh: 0
+--- !u!95 &387601599
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387601595}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 435d195144b93e54197b17f2a0359893, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &392311434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20168,6 +20402,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 413221382}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &413221382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20312,6 +20549,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 419509418}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &419509418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21591,6 +21831,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 449354586}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &449354586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22080,6 +22323,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 472109956}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &472109956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22533,6 +22779,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 481216680}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!54 &481216676
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23180,6 +23429,100 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 499676495}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &501205187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 501205188}
+  - component: {fileID: 501205190}
+  - component: {fileID: 501205189}
+  - component: {fileID: 501205191}
+  m_Layer: 5
+  m_Name: StartTransition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &501205188
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501205187}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2051691878}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.00016021729}
+  m_SizeDelta: {x: 1920, y: 803.8495}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &501205189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501205187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &501205190
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501205187}
+  m_CullTransparentMesh: 0
+--- !u!95 &501205191
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501205187}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0782d5367166c2941b77e4368fc28bb4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &509281084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23716,6 +24059,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 524634575}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &524634575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24238,6 +24584,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 540331860}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &540331860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25789,6 +26138,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 575816544}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &575816544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27227,7 +27579,7 @@ Transform:
   m_Children:
   - {fileID: 621329782}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 161.58601, z: 0}
 --- !u!4 &621329782
 Transform:
@@ -29016,6 +29368,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 694145352}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &694145352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29795,9 +30150,9 @@ RectTransform:
   m_Father: {fileID: 2051691878}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -691, y: -1142}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 250, y: 36.36554}
   m_SizeDelta: {x: 500, y: 72.73108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &711758298
@@ -30052,6 +30407,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 714635729}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &714635729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30574,6 +30932,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 730324930}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &730324930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30718,6 +31079,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 732586058}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &732586058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31448,6 +31812,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 746577048}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &746577048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31787,6 +32154,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 752934039}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &752934039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34881,6 +35251,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 861049159}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &861049159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35346,6 +35719,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 880271978}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &880271978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35793,6 +36169,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 885043809}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!54 &885043805
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35937,6 +36316,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 885105120}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &885105120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38405,6 +38787,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 957028253}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &957028253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38675,6 +39060,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 959467205}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &959467205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39416,6 +39804,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 982276828}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &982276828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39798,6 +40189,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 987348527}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &987348527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40768,6 +41162,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1009384276}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1009384276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40912,6 +41309,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1011666681}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1011666681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42438,6 +42838,87 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1069126675}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1070575166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1070575167}
+  - component: {fileID: 1070575169}
+  - component: {fileID: 1070575168}
+  - component: {fileID: 1070575170}
+  m_Layer: 0
+  m_Name: Tower
+  m_TagString: Tower
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1070575167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070575166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.62, y: 2.58, z: 37.09}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4467576354547264}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1070575168
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070575166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.73
+  m_Height: 5.06
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1070575169
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070575166}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1070575170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070575166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8da1a76e962aa245bb17bd4d1ab730f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startTransition: {fileID: 501205187}
+  _endTransition: {fileID: 236821384}
+  _winAnim: {fileID: 387601595}
+  _gameOverAnim: {fileID: 1745345014}
+  _healthBar: {fileID: 1725732865385419794}
 --- !u!1 &1071517795
 GameObject:
   m_ObjectHideFlags: 0
@@ -43800,6 +44281,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1113211260}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1113211260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44574,6 +45058,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1132357831}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1132357831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45872,6 +46359,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1183629390}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1183629390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47427,6 +47917,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1229661420}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!54 &1229661416
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -53593,6 +54086,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1286465179}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1286465179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54351,6 +54847,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1302531737}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!54 &1302531733
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -55317,6 +55816,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1327548337}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1327548337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55461,6 +55963,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1329296984}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1329296984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55605,6 +56110,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1332364631}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1332364631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56111,6 +56619,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1349457141}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1349457141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56348,6 +56859,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1362672137}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1362672137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56827,6 +57341,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1389127497}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1389127497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58478,6 +58995,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1513501087}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1513501087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58685,6 +59205,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1515720351}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1515720351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60187,6 +60710,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1564482846}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1564482846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60514,6 +61040,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1577331360}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1577331360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60904,6 +61433,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1584035320}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1584035320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66899,6 +67431,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1614702244}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1614702244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69791,6 +70326,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1740479366}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1740479366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69944,6 +70482,100 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1743862657}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1745345014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1745345015}
+  - component: {fileID: 1745345017}
+  - component: {fileID: 1745345016}
+  - component: {fileID: 1745345018}
+  m_Layer: 5
+  m_Name: GameOver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1745345015
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745345014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2051691878}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000053406, y: -0.024532}
+  m_SizeDelta: {x: 2286.1965, y: 1349.8185}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1745345016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745345014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5bf7c8641251d1f488accbf85029cf55, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1745345017
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745345014}
+  m_CullTransparentMesh: 0
+--- !u!95 &1745345018
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745345014}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e96fd1ae1cb462a408bd55e794e2d379, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1747793702
 GameObject:
   m_ObjectHideFlags: 0
@@ -71261,6 +71893,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1803368785}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1803368785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71645,6 +72280,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1811933721}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1811933721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76835,6 +77473,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1829628274}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1829628274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78075,6 +78716,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1854301651}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1854301651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78339,6 +78983,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1857745080}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1857745080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78749,6 +79396,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1866816940}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!54 &1866816936
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -79019,6 +79669,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1870571468}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1870571468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80402,6 +81055,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1922685145}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1922685145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81190,6 +81846,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1940233762}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1940233762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81507,6 +82166,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1943080007}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!54 &1943080003
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -82354,6 +83016,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1970291311}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1970291311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82866,6 +83531,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 1983054937}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &1983054937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90258,7 +90926,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -90276,6 +90944,10 @@ RectTransform:
   - {fileID: 1776099458}
   - {fileID: 1547970040639881396}
   - {fileID: 711758297}
+  - {fileID: 1745345015}
+  - {fileID: 387601596}
+  - {fileID: 501205188}
+  - {fileID: 236821385}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -91326,6 +91998,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 2101967521}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!54 &2101967517
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -91596,6 +92271,9 @@ MonoBehaviour:
   dieDelay: 3
   destructible: {fileID: 2110597442}
   lookRadius: 10
+  playerTransform: {fileID: 0}
+  towerTransform: {fileID: 0}
+  currentTargetTransform: {fileID: 0}
 --- !u!114 &2110597442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92865,59 +93543,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4467576354547264}
-  - component: {fileID: 1662680167993905}
-  - component: {fileID: 1662680167993906}
-  - component: {fileID: 1662680167993907}
   m_Layer: 0
-  m_Name: Tower
+  m_Name: Model
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &1662680167993905
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662680167993904}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.18
-  m_Height: 0.8
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1662680167993906
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662680167993904}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1662680167993907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662680167993904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8da1a76e962aa245bb17bd4d1ab730f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthBar: {fileID: 1725732865385419794}
 --- !u!4 &4000012140381915
 Transform:
   m_ObjectHideFlags: 0
@@ -92967,8 +93599,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662680167993904}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.58, y: 2.52, z: 37.06}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.03999996, y: -0.059999943, z: -0.02999878}
   m_LocalScale: {x: 5, y: 7, z: 5}
   m_Children:
   - {fileID: 4682925446073526}
@@ -92976,8 +93608,8 @@ Transform:
   - {fileID: 4314983063821178}
   - {fileID: 4292962918922866}
   - {fileID: 448352823}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1070575167}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4682925446073526
 Transform:
@@ -93318,7 +93950,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 43, y: -58}
+  m_AnchoredPosition: {x: 0, y: -36.36554}
   m_SizeDelta: {x: 1000, y: 72.73108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1548482934113499076
@@ -93396,7 +94028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4481132, g: 1, b: 0.4481132, a: 1}
+  m_Color: {r: 0.3529412, g: 0.4, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -93460,8 +94092,8 @@ MonoBehaviour:
   highHealth: 66
   regenerateHealth: 0
   healthPerSecond: 10
-  highHealthColor: {r: 0.3537736, g: 1, b: 0.3537736, a: 1}
-  mediumHealthColor: {r: 1, g: 0.9450285, b: 0.4470588, a: 1}
+  highHealthColor: {r: 0.35294116, g: 0.40031204, b: 1, a: 1}
+  mediumHealthColor: {r: 1, g: 0.4470588, b: 0.81705856, a: 1}
   lowHealthColor: {r: 1, g: 0.25943398, b: 0.25943398, a: 1}
 --- !u!114 &1728608383680183030
 MonoBehaviour:

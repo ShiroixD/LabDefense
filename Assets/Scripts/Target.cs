@@ -15,9 +15,9 @@ public class Target : MonoBehaviour
     public Destructible destructible;
     public float lookRadius = 10f;
 
-    private Transform playerTransform;
-    private Transform towerTransform;
-    private Transform currentTargetTransform;
+    public Transform playerTransform;
+    public Transform towerTransform;
+    public Transform currentTargetTransform;
     private NavMeshAgent agent;
     private bool isAttacking;
 
@@ -43,8 +43,9 @@ public class Target : MonoBehaviour
             float distanceToTarget = Vector3.Distance(currentTargetTransform.position, transform.position);
             agent.SetDestination(currentTargetTransform.position);
             FaceTarget();
-
-            if (distanceToTarget <= agent.stoppingDistance)
+            Debug.Log("Distance to player: " + distanceToPlayer);
+            Debug.Log("Distance to target: " + distanceToTarget);
+            if (distanceToTarget <= 2 * agent.stoppingDistance)
             {
                 if (currentTargetTransform.CompareTag("Player"))
                 {
