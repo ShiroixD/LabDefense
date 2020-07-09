@@ -20,6 +20,8 @@ public class Gun : MonoBehaviour
     public AudioClip fireSound;
     public AudioClip reloadSound;
 
+    [SerializeField]
+    private Player _player;
     private float nextTimeToFire = 0f;
     private bool isShooting = false;
 
@@ -48,7 +50,7 @@ public class Gun : MonoBehaviour
             return;
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && _player.State == PlayerStates.NORMAL)
         {
             isShooting = true;
             if (gunType == GunType.RIFLE)
@@ -62,7 +64,7 @@ public class Gun : MonoBehaviour
                 GetComponent<AudioSource>().Stop();
         }
 
-        if (Input.GetButton("Fire1") & Time.time >= nextTimeToFire)
+        if (Input.GetButton("Fire1") & Time.time >= nextTimeToFire && _player.State == PlayerStates.NORMAL)
         {
             nextTimeToFire = Time.time * 1f / fireRate;
             Shoot();

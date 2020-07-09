@@ -2,6 +2,8 @@
 
 public class Player : MonoBehaviour
 {
+    public PlayerStates State = PlayerStates.NORMAL;
+
     [SerializeField]
     private Healthbar _healthBar;
 
@@ -12,12 +14,21 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        
+        if (State == PlayerStates.PARALIZED && _healthBar.health == _healthBar.maximumHealth)
+        {
+            State = PlayerStates.NORMAL;
+            GetComponent<Rigidbody>().isKinematic = false;
+        }
     }
 
     public void TakeDamage(int amount)
     {
         _healthBar.TakeDamage(amount);
+        if (_healthBar.health <= _healthBar.minimumHealth)
+        {
+            State = PlayerStates.PARALIZED;
+            GetComponent<Rigidbody>().isKinematic = true;
+        }
     }
 
     public void GainHealth(int amount)

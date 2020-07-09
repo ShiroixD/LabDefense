@@ -36,7 +36,12 @@ public class Target : MonoBehaviour
             float distanceToPlayer = Vector3.Distance(playerTransform.position, transform.position);
 
             if (distanceToPlayer <= lookRadius)
-                currentTargetTransform = playerTransform;
+            {
+                if (playerTransform.GetComponent<Player>().State == PlayerStates.NORMAL)
+                    currentTargetTransform = playerTransform;
+                else
+                    currentTargetTransform = towerTransform;
+            }
             else
                 currentTargetTransform = towerTransform;
 
@@ -101,6 +106,10 @@ public class Target : MonoBehaviour
         }
     }
 
+    public void Disappear()
+    {
+        Destroy(gameObject);
+    }
 
     IEnumerator AttackPlayer(float time)
     {

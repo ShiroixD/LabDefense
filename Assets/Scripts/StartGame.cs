@@ -7,8 +7,6 @@ public class StartGame : MonoBehaviour
 {
     [SerializeField]
     private GameObject _transition;
-    [SerializeField]
-    private GameObject[] _objectsToEnable;
     private bool _startedGame = false;
 
     public void BeginGame()

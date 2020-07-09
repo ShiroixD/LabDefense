@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Tower : MonoBehaviour
 {
+    public float timeLimitSec = 180;
+    public float currentTimeSec;
+
     [SerializeField]
     private GameObject _startTransition;
 
@@ -20,18 +23,37 @@ public class Tower : MonoBehaviour
     [SerializeField]
     private Healthbar _healthBar;
 
+    [SerializeField]
+    private Spawner _spawner;
+
     private bool _gameEnded = false;
+    private bool halfGamePart = false;
 
     void Start()
     {
+        currentTimeSec = timeLimitSec;
         StartCoroutine(StartGameTransition(1.5f));
     }
 
     void Update()
     {
+        if (!_gameEnded)
+            currentTimeSec -= Time.deltaTime;
+
         if (_healthBar.health <= 0)
         {
             GameOver();
+        }
+
+        if (!halfGamePart && currentTimeSec <= timeLimitSec / 2.0f)
+        {
+            halfGamePart = true;
+            _spawner.DoubleSpawnAmount();
+        }
+
+        if (currentTimeSec <= 0)
+        {
+            Win();
         }
     }
 
@@ -74,6 +96,12 @@ public class Tower : MonoBehaviour
     private IEnumerator GameOverTransition(float time)
     {
         _gameEnded = true;
+        _spawner.spawnActive = false;
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Target");
+        foreach (GameObject enemy in enemies)
+        {
+            enemy.GetComponent<Target>().Disappear();
+        }
         _gameOverAnim.SetActive(true);
         yield return new WaitForSeconds(time);
         _endTransition.SetActive(true);
@@ -84,6 +112,12 @@ public class Tower : MonoBehaviour
     private IEnumerator WinTransition(float time)
     {
         _gameEnded = true;
+        _spawner.spawnActive = false;
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Target");
+        foreach(GameObject enemy in enemies)
+        {
+            enemy.GetComponent<Target>().Disappear();
+        }
         _winAnim.SetActive(true);
         yield return new WaitForSeconds(time);
         _endTransition.SetActive(true);
