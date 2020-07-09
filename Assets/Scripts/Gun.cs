@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class Gun : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class Gun : MonoBehaviour
 
     [SerializeField]
     private Player _player;
+
+    [SerializeField]
+    private TextMeshProUGUI _ammoCounter;
+
     private float nextTimeToFire = 0f;
     private bool isShooting = false;
 
@@ -46,6 +51,7 @@ public class Gun : MonoBehaviour
 
         if (currentAmmo <= 0 || Input.GetKeyDown(KeyCode.R))
         {
+            currentAmmo = 0;
             StartCoroutine(Reload());
             return;
         }
@@ -69,11 +75,19 @@ public class Gun : MonoBehaviour
             nextTimeToFire = Time.time * 1f / fireRate;
             Shoot();
         }
+
+        CalculateAmmoCounter();
+    }
+
+    private void CalculateAmmoCounter()
+    {
+        _ammoCounter.text = currentAmmo.ToString() + " / " + maxAmmo.ToString();
     }
 
     IEnumerator Reload()
     {
         isReloading = true;
+        _ammoCounter.text = "Reloading";
         Debug.Log("Reloading ...");
         animator.SetBool("Reloading", true);
         GetComponent<AudioSource>().Stop();
@@ -82,6 +96,7 @@ public class Gun : MonoBehaviour
         animator.SetBool("Reloading", false);
         yield return new WaitForSeconds(.25f);
         currentAmmo = maxAmmo;
+        CalculateAmmoCounter();
         isReloading = false;
     }
 

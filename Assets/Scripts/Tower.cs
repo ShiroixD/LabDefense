@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -26,6 +27,9 @@ public class Tower : MonoBehaviour
     [SerializeField]
     private Spawner _spawner;
 
+    [SerializeField]
+    private TextMeshProUGUI _timeCounter;
+
     private bool _gameEnded = false;
     private bool halfGamePart = false;
 
@@ -39,6 +43,8 @@ public class Tower : MonoBehaviour
     {
         if (!_gameEnded)
             currentTimeSec -= Time.deltaTime;
+
+        CalculateTimeCounter();
 
         if (_healthBar.health <= 0)
         {
@@ -123,5 +129,24 @@ public class Tower : MonoBehaviour
         _endTransition.SetActive(true);
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+    }
+
+    private void CalculateTimeCounter()
+    {
+        string timeLabel = "";
+        if (currentTimeSec <= 0)
+            timeLabel += "00:00";
+        else
+        {
+            int minutes = (int)(currentTimeSec / 60.0f);
+            int seconds = (int)(currentTimeSec - minutes * 60);
+            if (minutes < 10)
+                timeLabel += "0";
+            timeLabel += minutes.ToString() + ":";
+            if (seconds < 10)
+                timeLabel += "0";
+            timeLabel += seconds.ToString();
+        }
+        _timeCounter.text = timeLabel;
     }
 }
