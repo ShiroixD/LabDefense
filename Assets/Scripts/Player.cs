@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
         {
             State = PlayerStates.NORMAL;
             GetComponent<Rigidbody>().isKinematic = false;
+            _healthBar.healthPerSecond /= 3;
         }
     }
 
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
         {
             State = PlayerStates.PARALIZED;
             GetComponent<Rigidbody>().isKinematic = true;
+            _healthBar.healthPerSecond *= 3;
         }
     }
 

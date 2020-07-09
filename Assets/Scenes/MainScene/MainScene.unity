@@ -28137,6 +28137,8 @@ MonoBehaviour:
     type: 3}
   boxesPrefab: {fileID: 5994076069498926257, guid: 31a16d746a91c9242b7bdf360fe105ad,
     type: 3}
+  _grenadeAmount: 5
+  _grenadeCounter: {fileID: 674758258}
 --- !u!20 &621814646
 Camera:
   m_ObjectHideFlags: 0
@@ -95271,10 +95273,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunType: 1
-  damage: 20
+  damage: 100
   range: 200
   fireRate: 0.95
-  impactForce: 500
+  impactForce: 2000
   maxAmmo: 250
   reloadTime: 10
   fpsCam: {fileID: 621814646}
@@ -111383,7 +111385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunType: 2
-  damage: 2
+  damage: 100
   range: 50
   fireRate: 0.9
   impactForce: 100

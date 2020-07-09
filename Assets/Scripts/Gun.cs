@@ -113,6 +113,16 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
+            Tower tower = hit.transform.GetComponent<Tower>();
+            if (tower != null)
+            {
+                if (gunType == GunType.Pistol)
+                {
+                    Tower towerScript = tower.GetComponent<Tower>();
+                    if (towerScript != null)
+                        towerScript.GainHealth((int)damage);
+                }
+            }
 
             Target target = hit.transform.GetComponent<Target>();
             if (target != null)
