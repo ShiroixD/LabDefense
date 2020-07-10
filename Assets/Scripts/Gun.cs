@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class Gun : MonoBehaviour
 {
@@ -19,6 +20,12 @@ public class Gun : MonoBehaviour
     public GameObject impactEffect;
     public AudioClip fireSound;
     public AudioClip reloadSound;
+
+    [SerializeField]
+    private Player _player;
+
+    [SerializeField]
+    private TextMeshProUGUI _ammoCounter;
 
     private float nextTimeToFire = 0f;
     private bool isShooting = false;
@@ -44,11 +51,12 @@ public class Gun : MonoBehaviour
 
         if (currentAmmo <= 0 || Input.GetKeyDown(KeyCode.R))
         {
+            currentAmmo = 0;
             StartCoroutine(Reload());
             return;
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && _player.State == PlayerStates.NORMAL)
         {
             isShooting = true;
             if (gunType == GunType.RIFLE)
@@ -62,16 +70,24 @@ public class Gun : MonoBehaviour
                 GetComponent<AudioSource>().Stop();
         }
 
-        if (Input.GetButton("Fire1") & Time.time >= nextTimeToFire)
+        if (Input.GetButton("Fire1") & Time.time >= nextTimeToFire && _player.State == PlayerStates.NORMAL)
         {
             nextTimeToFire = Time.time * 1f / fireRate;
             Shoot();
         }
+
+        CalculateAmmoCounter();
+    }
+
+    private void CalculateAmmoCounter()
+    {
+        _ammoCounter.text = currentAmmo.ToString() + " / " + maxAmmo.ToString();
     }
 
     IEnumerator Reload()
     {
         isReloading = true;
+        _ammoCounter.text = "Reloading";
         Debug.Log("Reloading ...");
         animator.SetBool("Reloading", true);
         GetComponent<AudioSource>().Stop();
@@ -80,6 +96,7 @@ public class Gun : MonoBehaviour
         animator.SetBool("Reloading", false);
         yield return new WaitForSeconds(.25f);
         currentAmmo = maxAmmo;
+        CalculateAmmoCounter();
         isReloading = false;
     }
 
@@ -96,6 +113,16 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
+            Tower tower = hit.transform.GetComponent<Tower>();
+            if (tower != null)
+            {
+                if (gunType == GunType.Pistol)
+                {
+                    Tower towerScript = tower.GetComponent<Tower>();
+                    if (towerScript != null)
+                        towerScript.GainHealth((int)damage);
+                }
+            }
 
             Target target = hit.transform.GetComponent<Target>();
             if (target != null)

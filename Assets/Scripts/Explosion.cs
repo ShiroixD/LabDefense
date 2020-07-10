@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Security.Policy;
 using UnityEngine;
 
 public class Explosion : MonoBehaviour
@@ -31,18 +30,13 @@ public class Explosion : MonoBehaviour
                 matrices.Add(Matrix4x4.TRS(new Vector3(x, y, z), Quaternion.identity, this.transform.localScale));
                 positions.Add(new Vector3(x, y, z));
             }
-        }
 
-
-        if (ifInstanced)
-        {
-            
-            if(!GPU_Instancing)
+            if (!GPU_Instancing)
             {
                 foreach (Vector3 pos in positions)
                 {
 
-                   float  r = Mathf.Sin((Time.time / loopduration) * (2 * Mathf.PI)) * 0.5f + 0.25f;
+                    float r = Mathf.Sin((Time.time / loopduration) * (2 * Mathf.PI)) * 0.5f + 0.25f;
                     float g = Mathf.Sin((Time.time / loopduration + 0.33333333f) * 2 * Mathf.PI) * 0.5f + 0.25f;
                     float b = Mathf.Sin((Time.time / loopduration + 0.66666667f) * 2 * Mathf.PI) * 0.5f + 0.25f;
                     float correction = 1 / (r + g + b);
@@ -55,12 +49,8 @@ public class Explosion : MonoBehaviour
                     instance.transform.Rotate(new Vector3(1, 1, 1), Random.Range(-0.5f, 0.5f));
                     instance.GetComponent<Explosion>().ifInstanced = false;
                     renderer = instance.GetComponent<MeshRenderer>();
-                    // props.SetVector("_Pos", new Vector4(pos.x, pos.y, pos.z, 0));
                     renderer.material.SetVector("_ChannelFactor", new Vector4(r, g, b, 0));
                     renderer.material.SetVector("_Range", new Vector4(rangeX, rangeY, 0, 1));
-
-
-                    //    renderer.SetPropertyBlock(props);
                 }
             }
         }

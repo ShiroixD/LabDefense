@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5783712530928809613}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -130,7 +130,6 @@ MonoBehaviour:
   force: 200
   explosionEffect: {fileID: 2678805063736211877, guid: fdf0467c44625d74dbbe8bfeb63e054c,
     type: 3}
-  audioEffect: {fileID: 0}
 --- !u!82 &1223549164821424583
 AudioSource:
   m_ObjectHideFlags: 0
