@@ -14,7 +14,13 @@ public class Spawner : MonoBehaviour
     private int _spawnAmount;
 
     [SerializeField]
+    private int _spawnAddAmount;
+
+    [SerializeField]
     private float _spawnDelay;
+
+    [SerializeField]
+    private AudioSource _enemySpawnAudio;
 
     public bool spawnActive = true;
 
@@ -35,21 +41,23 @@ public class Spawner : MonoBehaviour
 
     public void DoubleSpawnAmount()
     {
-        _spawnAmount *= 2;
+        _spawnAmount += 3;
     }
 
     private IEnumerator Spawn(float time)
     {
-        while (spawnActive)
+        yield return new WaitForSeconds(10);
+        do
         {
-            yield return new WaitForSeconds(time);
+            _enemySpawnAudio.Play();
             for (int i = 0; i < _spawnAmount; i++)
             {
                 int spawnPointNumber = Random.Range(0, _spawnPoints.Length - 1);
                 int enemyPrefabNumber = Random.Range(0, _enemyPrefabs.Length - 1);
                 Instantiate(_enemyPrefabs[enemyPrefabNumber], _spawnPoints[spawnPointNumber].transform.position, Quaternion.identity);
             }
-            _spawnAmount += 2;
-        }
+            _spawnAmount += _spawnAddAmount;
+            yield return new WaitForSeconds(time);
+        } while (spawnActive);
     }
 }

@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Healthbar _healthBar;
 
+    [SerializeField]
+    private AudioSource _hitAudio;
+
     void Start()
     {
         
@@ -24,6 +27,8 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        if (!_hitAudio.isPlaying)
+            _hitAudio.Play();
         _healthBar.TakeDamage(amount);
         if (_healthBar.health <= _healthBar.minimumHealth)
         {

@@ -30,6 +30,15 @@ public class Tower : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _timeCounter;
 
+    [SerializeField]
+    private AudioSource _backgroundAudio;
+
+    [SerializeField]
+    private AudioClip _gameOverMusic;
+
+    [SerializeField]
+    private AudioClip _winMusic;
+
     private bool _gameEnded = false;
     private bool halfGamePart = false;
 
@@ -85,11 +94,13 @@ public class Tower : MonoBehaviour
 
     public void GameOver()
     {
+        _backgroundAudio.PlayOneShot(_gameOverMusic);
         StartCoroutine(GameOverTransition(1.5f));
     }
 
     public void Win()
     {
+        _backgroundAudio.PlayOneShot(_winMusic);
         StartCoroutine(WinTransition(1.5f));
     }
 
