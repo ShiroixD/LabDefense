@@ -21,12 +21,19 @@ public class Target : MonoBehaviour
     private NavMeshAgent agent;
     private bool isAttacking;
 
+    [SerializeField]
+    private GameObject DestroyEffect;
+
+    [SerializeField]
+    private GameObject Model;
+
     void Start()
     {
         playerTransform = PlayerManager.instance.player.transform;
         towerTransform = GameObject.FindWithTag("Tower").transform;
         currentTargetTransform = towerTransform;
         agent = GetComponent<NavMeshAgent>();
+        StartCoroutine(EnemyAppearAnim());
     }
 
     private void Update()
@@ -101,14 +108,19 @@ public class Target : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
+                Disappear();
             }
         }
     }
 
     public void Disappear()
     {
-        Destroy(gameObject);
+        DestroyEffect.SetActive(true);
+        GetComponent<NavMeshAgent>().isStopped = true;
+        GetComponent<Collider>().enabled = false;
+        GetComponent<Rigidbody>().isKinematic = true;
+        Model.SetActive(false);
+        Destroy(gameObject, 1f);
     }
 
     IEnumerator AttackPlayer(float time)
@@ -129,5 +141,11 @@ public class Target : MonoBehaviour
             yield return new WaitForSeconds(time);
             tower.TakeDamage((int)damage);
         }
+    }
+
+    IEnumerator EnemyAppearAnim()
+    {
+        yield return new WaitForSeconds(1f);
+        DestroyEffect.SetActive(false);
     }
 }

@@ -241,6 +241,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &3078273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2961,6 +2962,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &105469529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3470,6 +3472,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &120613351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3877,7 +3880,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 463, y: 50}
+  m_AnchoredPosition: {x: 604, y: 50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &138533485
@@ -3915,7 +3918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 49, y: 50}
+  m_AnchoredPosition: {x: 190.00003, y: 50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &138732804
@@ -4552,6 +4555,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!54 &161571722
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5163,6 +5167,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &188990154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12673,6 +12678,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &303028790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14074,6 +14080,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &342465312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20646,6 +20653,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &413221382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20867,6 +20875,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &419509418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22149,6 +22158,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &449354586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22641,6 +22651,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &472109956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23298,6 +23309,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!54 &481216676
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24578,6 +24590,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &524634575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25103,6 +25116,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &540331860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26657,6 +26671,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &575816544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30292,6 +30307,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &694145352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31074,7 +31090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 439, y: 53}
+  m_AnchoredPosition: {x: 580, y: 53}
   m_SizeDelta: {x: 500, y: 72.73108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &711758298
@@ -31332,6 +31348,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &714635729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31857,6 +31874,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &730324930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32004,6 +32022,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &732586058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32737,6 +32756,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &746577048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33079,6 +33099,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &752934039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36364,6 +36385,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &861049159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36832,6 +36854,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &880271978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37282,6 +37305,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!54 &885043805
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -37429,6 +37453,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &885105120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39974,6 +39999,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &957028253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40247,6 +40273,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &959467205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40991,6 +41018,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &982276828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41376,6 +41404,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &987348527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42349,6 +42378,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1009384276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42496,6 +42526,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1011666681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44309,7 +44340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 292, y: -57}
+  m_AnchoredPosition: {x: 518.00006, y: -57}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1075948050
@@ -45513,6 +45544,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1113211260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46290,6 +46322,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1132357831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47591,6 +47624,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1183629390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49305,6 +49339,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!54 &1229661416
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -55474,6 +55509,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1286465179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56235,6 +56271,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!54 &1302531733
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -57204,6 +57241,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1327548337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57351,6 +57389,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1329296984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57498,6 +57537,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1332364631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58007,6 +58047,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1349457141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58247,6 +58288,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1362672137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58729,6 +58771,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1389127497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60457,6 +60500,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1513501087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60667,6 +60711,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1515720351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62172,6 +62217,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1564482846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62502,6 +62548,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1577331360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62895,6 +62942,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1584035320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68893,6 +68941,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1614702244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71788,6 +71837,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1740479366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73482,6 +73532,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1803368785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73869,6 +73920,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1811933721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79062,6 +79114,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1829628274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80305,6 +80358,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1854301651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80572,6 +80626,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1857745080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80985,6 +81040,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!54 &1866816936
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -81258,6 +81314,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1870571468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82800,6 +82857,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1922685145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83591,6 +83649,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1940233762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83911,6 +83970,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!54 &1943080003
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -84761,6 +84821,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1970291311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85276,6 +85337,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &1983054937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93746,6 +93808,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!54 &2101967517
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -94019,6 +94082,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   towerTransform: {fileID: 0}
   currentTargetTransform: {fileID: 0}
+  DestroyEffect: {fileID: 0}
 --- !u!114 &2110597442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95696,7 +95760,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -48}
+  m_AnchoredPosition: {x: 226, y: -48}
   m_SizeDelta: {x: 1000, y: 72.73108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1548482934113499076
