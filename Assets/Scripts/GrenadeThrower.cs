@@ -26,13 +26,7 @@ public class GrenadeThrower : MonoBehaviour
         {
             if (_grenadeAmount > 0)
                 ThrowGrenade();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            Vector3 boxPos = transform.position + transform.forward * 10; ;
-            Instantiate(boxesPrefab, boxPos, transform.rotation);
-        }        
+        }      
     }
 
     void ThrowGrenade()
