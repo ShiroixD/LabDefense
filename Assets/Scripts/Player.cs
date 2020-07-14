@@ -17,6 +17,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
         if (State == PlayerStates.PARALIZED && _healthBar.health == _healthBar.maximumHealth)
         {
             State = PlayerStates.NORMAL;

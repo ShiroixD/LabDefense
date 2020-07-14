@@ -9,6 +9,14 @@ public class StartGame : MonoBehaviour
     private GameObject _transition;
     private bool _startedGame = false;
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     public void BeginGame()
     {
         if (!_startedGame)
