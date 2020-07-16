@@ -9,6 +9,11 @@ public class StartGame : MonoBehaviour
     private GameObject _transition;
     private bool _startedGame = false;
 
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
