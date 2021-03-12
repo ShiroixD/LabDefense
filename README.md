@@ -1,2 +1,2 @@
-# VR-Game
-VR game in Unity
+# LabDefense
+Created with Unity
